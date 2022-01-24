@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./static/css/styles.css">
+	<link rel="shortcut icon" href="./favicon.ico">
+	<title>EPV - Cuenta</title>
+</head>
+
+<body id="body">
+	<div id="principal" class="contenedor vertical total">
+		<nav class="encabezado">
+			<a class="logo" href="./">
+				<img src="./static/img/logo.png">
+			</a>
+			<ul>
+				<li><a href="./">Inicio</a></li>
+				<li><a href="./ejemplo">Ejemplo</a></li>
+				<li><a class="activo" href="./acceder">Cuenta</a></li>
+				<li><a href="./#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+
+		<div class="contenedor vertical total">
+			<h2>{{ correo }}</h2>
+
+			<form class="contenedor horizontal girar" action="./cuenta_post" method="POST">
+				<button type="submit" name="boton" value="salir">Cerrar sesion</button>
+				<button type="submit" name="boton" value="editar">Editar datos</button>
+				<button class="red" type="submit" name="boton" value="borrar">Borrar cuenta</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="./static/js/autoajuste.js"></script>
+</body>
+</html>

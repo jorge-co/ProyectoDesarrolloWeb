@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./static/css/styles.css">
+	<link rel="shortcut icon" href="./favicon.ico">
+	<title>EPV - Ejemplo</title>
+</head>
+
+<body id="body">
+	<div id="principal" class="contenedor vertical total">
+		<nav class="encabezado">
+			<a class="logo" href="./">
+				<img src="./static/img/logo.png">
+			</a>
+			<ul>
+				<li><a href="./">Inicio</a></li>
+				<li><a class="activo" href="./ejemplo">Ejemplo</a></li>
+				<li><a href="./acceder">Cuenta</a></li>
+				<li><a href="./#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+
+		<div class="contenedor vertical total">
+			<div class="contenedor vertical ancho-total">
+				<div class="contenedor horizontal">
+					<h1 id="marcador">Pong</h1>
+					<button id="boton" type="button">Comenzar</button>
+				</div>
+				<div class="contenedor total arriba">
+					<canvas class="juego" id="canvas"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./static/js/juego.js"></script>
+	<script src="./static/js/autoajuste.js"></script>
+</body>
+</html>

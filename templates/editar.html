@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./static/css/styles.css">
+	<link rel="shortcut icon" href="./favicon.ico">
+	<title>EPV - Editar</title>
+</head>
+
+<body id="body">
+	<div id="principal" class="contenedor vertical total">
+		<nav class="encabezado">
+			<a class="logo" href="./">
+				<img src="./static/img/logo.png">
+			</a>
+			<ul>
+				<li><a href="./">Inicio</a></li>
+				<li><a href="./ejemplo">Ejemplo</a></li>
+				<li><a class="activo" href="./acceder">Cuenta</a></li>
+				<li><a href="./#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+
+		<form class="contenedor vertical total separado" action="./editar_post" method="POST">
+			<div class="contenedor vertical">
+				<h2>Editar datos</h2>
+				{% if mensaje %}
+					<h2 class="error pegado">{{ mensaje }}</h2>
+				{% endif %}
+			</div>
+			<div class="contenedor horizontal">
+				<div class="contenedor vertical total arriba">
+					<h2>Correo</h2>
+					<h2>Clave</h2>
+				</div>
+				<div class="contenedor vertical total arriba">
+					<div class="contenedor total"><input name="correo" type="email" required value="{{ usuario.correo }}" ></div>
+					<div class="contenedor total"><input name="clave" type="text" required value="{{ usuario.clave }}"></div>
+				</div>
+			</div>
+			<div class="contenedor horizontal">
+				<button type="submit" name="boton" value="guardar">Guardar</button>
+				<button type="submit" name="boton" value="cancelar" formnovalidate>Cancelar</button>
+			</div>
+		</form>
+	</div>
+
+	<script src="./static/js/autoajuste.js"></script>
+</body>
+</html>

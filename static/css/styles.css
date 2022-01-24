@@ -1,0 +1,240 @@
+html
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body
+{
+    width: 100%;
+	height: 100%;
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+	background: #272727;
+}
+
+h1
+{
+	font-family: sans-serif;
+	font-size: 30px;
+	color:white;
+}
+
+h2
+{
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 22px;
+	color:white;
+	margin: 20px;
+	text-align: center;
+}
+
+h2.pegado
+{
+	margin-top: 0px;
+}
+
+h2.error
+{
+	color: rgb(255, 0, 0);
+}
+
+/* Clase entrada de datos */
+input
+{
+	display: flex;
+	color: white;
+
+	background-color: transparent;
+	border-color: white;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 10px;
+	margin: 0px 0px 20px 20px;
+	width: 50vw;
+	max-width: 400px;
+
+	font-size: 18px;
+	border-radius: 0%;
+	border-width: 0px 0px 2px 0px;
+}
+
+input:hover
+{
+	background-color: rgb(43, 85, 124);
+}
+
+input:focus
+{
+	background-color: rgb(11, 65, 56);
+	outline: none;
+}
+
+/* Clase boton */
+button
+{
+	display: flex;
+	color: white;
+	
+	background-color: rgb(19, 141, 121);
+	border-color: transparent;
+	text-align: center;
+	font-family: sans-serif;
+	width: fit-content;
+	padding: 10px 20px;
+	margin: 15px 20px 15px 20px;
+
+	font-size: 18px;
+	border-radius: 0%;
+}
+
+button.red
+{
+	background-color: rgb(141, 19, 19);
+}
+
+button:hover
+{
+	background-color: rgb(43, 85, 124);
+}
+
+button.red:hover
+{
+	background-color: rgb(163, 54, 26);
+}
+
+/* Clase contenedor */
+.contenedor
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor.vertical
+{
+	flex-direction: column;
+}
+
+.contenedor.horizontal
+{
+	flex-direction: row;
+}
+
+.contenedor.arriba
+{
+	align-items: flex-start;
+}
+
+.contenedor.ancho-total
+{
+	width: 100%;
+}
+
+.contenedor.total
+{
+	width: 100%;
+	height: 100%;
+}
+
+.contenedor.separado
+{
+	padding: 10px 0px;
+}
+
+/* Clase juego */
+.juego
+{
+	width: 70%;
+	height: 70vh;
+	touch-action: none;
+	margin-bottom: 5vh;
+  	border: 2px solid #FFFFFF;
+}
+
+/* Clase encabezado */
+.encabezado
+{
+	background-color: #525252;
+	align-items: center;
+	display: flex;
+	width: 100%;
+}
+
+.encabezado a
+{
+	font-family: sans-serif;
+	text-decoration: none;
+	color: #e7e7e7;
+}
+
+.encabezado .logo
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+}
+
+.encabezado img
+{
+	display: flex;
+	height: 40px;
+	width: auto;
+}
+
+.encabezado .activo
+{
+	background-color: rgb(19, 141, 121);
+}
+
+.encabezado ul a:hover,
+.encabezado .logo:hover
+{
+	color: white;
+	background-color: rgb(43, 85, 124);
+}
+
+.encabezado ul
+{
+	display: flex;
+	align-content: center;
+	justify-content: right;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	list-style-type: none;
+}
+
+.encabezado ul li a
+{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	color: #e7e7e7;
+	font-size: 18px;
+	padding: 20px;
+}
+
+/* Rotacion de contenido al tener menos de 500 pixeles horizontales */
+@media screen and (max-width: 500px)
+{
+	.girar,
+	.encabezado,
+	.encabezado ul
+	{
+		flex-direction: column;
+	}
+
+	.juego
+	{
+		width: 90%;
+	}
+}
